@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Login Container -->
+    <div id="login-container" class="login-container">
+        <h2>Sign In</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email Address" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Thank You Container -->
+    <div id="thankyou-container" class="thankyou-container hidden">
+        <h1>🎉 Thank You!</h1>
+        <p>You have successfully logged in.<br>Redirecting to your website...</p>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const loginContainer = document.getElementById("login-container");
+        const thankyouContainer = document.getElementById("thankyou-container");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Stop page reload
+            loginContainer.classList.add("hidden");
+            thankyouContainer.classList.remove("hidden");
+
+            // Redirect after 3 seconds
+            setTimeout(() => {
+                window.location.href = "https://yourwebsite.com"; // 🔗 Replace with your website link
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
