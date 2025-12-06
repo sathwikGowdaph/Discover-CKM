@@ -32,7 +32,7 @@ API Integrations	Google Maps API · Weather API
 UI/UX	Figma · Canva · Material Icons
 🚀 Installation & Setup
 # Clone the repository
-git clone https://github.com/yourusername/chikkamagaluru-tourism.git
+git clone  https://sathwikgowdaph.github.io/Discover-CKM/
 
 # Enter project directory
 cd chikkamagaluru-tourism
